@@ -1,5 +1,18 @@
-const sumAll = function() {
+const sumAll = function(num1, num2) {
+    let sum = 0;
+    if (typeof num1 !== "number" || 
+        typeof num2 !== "number" || 
+        num1 < 0 || 
+        num2 < 0) return "ERROR";
 
+    const smallerNumber = num1 < num2 ? num1 : num2;
+    const largerNumber = num1 > num2 ? num1 : num2;
+
+    for (let i = smallerNumber; i <= largerNumber; i++) {
+        sum += i;
+    }
+    
+    return sum;
 };
 
 // Do not edit below this line
